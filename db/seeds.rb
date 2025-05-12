@@ -7,3 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+# 1. Clean the DB
+# 2. Create the data, populate the db
+# 3. Put messages to let yoursef know what is happening

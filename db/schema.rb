@@ -32,9 +32,9 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_12_091758) do
 
   create_table "recipes", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.text "description"
     t.string "image_url"
-    t.integer "rating"
+    t.float "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
