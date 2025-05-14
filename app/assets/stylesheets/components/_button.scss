@@ -1,0 +1,16 @@
+.btn-warning {
+  color: white;
+  &:hover {
+    color: green;
+  }
+}
+
+
+  .btn-delete {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    &:hover {
+      color: red;
+    }
+  }
