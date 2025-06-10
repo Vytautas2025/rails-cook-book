@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=3200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @category.photo.key %>');">
   <div class="container">
     <h1><%= @category.name %></h1>
   </div>
@@ -22,7 +22,7 @@
         </div>
         <div class="rating-comment">
           <h2> " <%= bookmark.comment %></h2>
-          <h2 class="card-trip-pricing"><%= bookmark.recipe.rating %> <%= '⭐' * bookmark.recipe.rating.floor %></h2>
+          <h2 class="card-trip-pricing"><%= bookmark.recipe.rating.round(1) %> <%= '⭐' * bookmark.recipe.rating.floor %></h2>
         </div>
       </div>
       <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-delete" do %>
